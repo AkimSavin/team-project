@@ -13,14 +13,14 @@ class Explosion:
         self.frame = 0
         self.sectors = []
 
-    def explode1(self, map, bombs, b, power_ups):
+    def explode(self, map, bombs, b, power_ups):
 
-        self.bombers = b.bombers
+        self.bombers = b.bomber
         self.sectors.extend(b.sectors)
         bombs.remove(b)
-        self.bomb_chain2(bombs, map, power_ups)
+        self.bomb_chain(bombs, map, power_ups)
 
-    def bomb_chain2(self, bombs, map, power_ups):
+    def bomb_chain(self, bombs, map, power_ups):
 
         for s in self.sectors:
             for x in power_ups:
@@ -31,7 +31,7 @@ class Explosion:
                 if x.pos_x == s[0] and x.pos_y == s[1]:
                     map[x.pos_x][x.pos_y] = 0
                     x.bombers.bomb_limit += 1
-                    self.explode1(map, bombs, x, power_ups)
+                    self.explode(map, bombs, x, power_ups)
 
     def clear_sectors(self, map, random, power_ups):
 

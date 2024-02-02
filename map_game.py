@@ -35,7 +35,7 @@ MAP = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
 
 
-def create_game(surface, path, player_alg, en1_alg, en2_alg, en3_alg, scale):
+def game_init(surface, path, player_alg, en1_alg, en2_alg, en3_alg, scale):
     global font
     font = pygame.font.SysFont('Bebas', scale)
 
