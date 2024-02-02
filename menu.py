@@ -1,7 +1,7 @@
 import pygame
 import pygame_menu
 
-import game
+import map_game
 from enumes.algorithm import Algorithm
 
 COLOR_BACKGROUND = (153, 153, 255)
