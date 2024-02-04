@@ -130,7 +130,6 @@ def menu_loop():
     )
     about_menu.add.label("Player controls: ")
     about_menu.add.label("Movement: Arrows")
-    about_menu.add.label("https://opengameart.org/ content/bomb-party-the-complete-set", wordwrap=True)
     about_menu.add.vertical_margin(25)
     about_menu.add.button('Return  to  main  menu', pygame_menu.events.BACK)
 
